@@ -24,7 +24,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: JSX.Element;
 };
 
-export const Button: React.FC<ButtonProps> = props => {
+const Button: React.FC<ButtonProps> = props => {
   const { children, variant = 'primary', icon } = props;
   return (
     <button
