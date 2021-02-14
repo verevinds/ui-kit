@@ -9,7 +9,6 @@
     "dist/*"
   ],
   "scripts": {
-    "postinstall": "npx husky install",
     "build": "parcel build ./src/index.tsx",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
