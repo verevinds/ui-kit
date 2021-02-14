@@ -6,7 +6,8 @@
   "jsnext:main": "dist/index.js",
   "typings": "./index.d.ts",
   "files": [
-    "dist/*"
+    "dist/*",
+    "./index.d.ts"
   ],
   "scripts": {
     "build": "parcel build ./src/index.tsx",
