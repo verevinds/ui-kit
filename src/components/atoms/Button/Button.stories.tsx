@@ -1,9 +1,10 @@
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Story } from '@storybook/react/types-6-0';
 import React from 'react';
 
 import Button, { ButtonProps } from './Button';
 
-// This default export determines where your story goes in the story list
 export default {
   title: 'Button',
   component: Button,
@@ -11,9 +12,27 @@ export default {
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-export const FirstStory = Template.bind({});
+export const Empty = Template.bind({});
 
-FirstStory.args = {
-  children: 'hellow',
+Empty.args = {};
+
+export const Default = Template.bind({});
+
+Default.args = {
+  children: 'Отправить',
   type: 'button',
+};
+
+export const ButtonWithIcon = Template.bind({});
+
+ButtonWithIcon.args = {
+  children: 'Отправить',
+  type: 'button',
+  icon: <FontAwesomeIcon icon={faTrash} />,
+};
+export const ButtonWithIconAndNoText = Template.bind({});
+
+ButtonWithIconAndNoText.args = {
+  type: 'button',
+  icon: <FontAwesomeIcon icon={faTrash} />,
 };
