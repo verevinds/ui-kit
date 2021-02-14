@@ -3,5 +3,5 @@ lib
 tsconfig.json
 storybook-static
 .storybook
-src/stories
+stories
 dist
