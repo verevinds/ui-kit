@@ -23,16 +23,13 @@ declare module '@verevinds/ui-kit/components/atoms/Button/Button' {
   const Button: React.FC<ButtonProps>;
   export default Button;
 }
-declare module '@verevinds/ui-kit/components/atoms/Button/index' {
-  export { default } from '@verevinds/ui-kit/components/atoms/Button/Button';
-}
 declare module '@verevinds/ui-kit/index' {
-  import Button from '@verevinds/ui-kit/components/atoms/Button/index';
+  import Button from '@verevinds/ui-kit/components/atoms/Button/Button';
 
   export { Button };
 }
 declare module '@verevinds/ui-kit' {
-  import main = require('@verevinds/ui-kit/dist/index.js');
+  import main = require('@verevinds/ui-kit/src/index');
 
   export = main;
 }

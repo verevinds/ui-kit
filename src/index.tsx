@@ -1,4 +1,2 @@
 /* eslint-disable import/prefer-default-export */
-import Button from './components/atoms/Button';
-
-export { Button };
+export { default as Button } from './components/atoms/Button/Button';
