@@ -6,7 +6,7 @@
   "jsnext:main": "dist/index.js",
   "typings": "./index.d.ts",
   "files": [
-    "dist/*",
+    "src/*",
     "*.d.ts"
   ],
   "scripts": {
