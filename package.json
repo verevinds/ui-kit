@@ -1,9 +1,9 @@
 {
   "name": "@verevinds/ui-kit",
   "version": "1.0.20",
-  "main": "src/index.js",
-  "module": "src/index.js",
-  "jsnext:main": "src/index.js",
+  "main": "src/index.tsx",
+  "module": "src/index.tsx",
+  "jsnext:main": "src/index.tsx",
   "typings": "index.d.ts",
   "files": [
     "dist/*",
