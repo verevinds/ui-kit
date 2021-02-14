@@ -2,7 +2,7 @@
   display: inline-block;
   padding: 0.375em 0.75em;
   color: var(--color-text-dark, #212529);
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 1em;
   line-height: 1.5;
   text-align: center;

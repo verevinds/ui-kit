@@ -25,11 +25,16 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const Button: React.FC<ButtonProps> = props => {
-  const { children, variant = 'primary', icon } = props;
+  const { children, variant = 'primary', icon, className } = props;
   return (
     <button
-      className={cn('btn', `btn-${variant}`, 'js-focus-visible')}
       {...props}
+      className={cn(
+        'btn',
+        `btn-${variant}`,
+        'js-focus-visible',
+        className && className,
+      )}
     >
       {icon && <span className={cn(children && 'btn-icon')}>{icon}</span>}
       <span>{children}</span>
