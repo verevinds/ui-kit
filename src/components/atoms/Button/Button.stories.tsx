@@ -11,16 +11,18 @@ export default {
 };
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
-
-export const Empty = Template.bind({});
-
-Empty.args = {};
-
 export const Default = Template.bind({});
 
 Default.args = {
   children: 'Отправить',
   type: 'button',
+  disabled: false,
+};
+
+export const Empty = Template.bind({});
+
+Empty.args = {
+  disabled: false,
 };
 
 export const ButtonWithIcon = Template.bind({});
@@ -29,10 +31,12 @@ ButtonWithIcon.args = {
   children: 'Отправить',
   type: 'button',
   icon: <FontAwesomeIcon icon={faTrash} />,
+  disabled: false,
 };
 export const ButtonWithIconAndNoText = Template.bind({});
 
 ButtonWithIconAndNoText.args = {
   type: 'button',
   icon: <FontAwesomeIcon icon={faTrash} />,
+  disabled: false,
 };

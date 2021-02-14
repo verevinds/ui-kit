@@ -10,12 +10,14 @@
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25em;
-  cursor: pointer;
   transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
     border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.btn:not(:disabled) {
+  cursor: pointer;
 }
 .btn-icon {
   margin-right: 0.5em;
@@ -30,16 +32,20 @@
   background-color: var(--color-primary, hsl(211, 100%, 50%));
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
-.btn-primary:hover {
+.btn-primary:not(:disabled):hover {
   background-color: var(--color-primary-dark, hsl(211, 100%, 43%));
   border-color: var(--color-primary-darker, hsl(211, 100%, 40%));
 }
-.btn-primary:active {
+.btn-primary:not(:disabled):active {
   background-color: var(--color-primary-darker, hsl(211, 100%, 40%));
   border-color: var(--color-primary-darkest, hsl(211, 100%, 37%));
 }
-.btn-primary.js-focus-visible.focus-visible {
+.btn-primary:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-primary-light, hsl(211deg 100% 60%));
+}
+.btn-primary:disabled {
+  background-color: var(--color-primary-lightest, hsl(211, 100%, 70%));
+  border-color: var(--color-primary-lighter, hsl(211, 100%, 67%));
 }
 
 /* Outline-primary */
@@ -47,18 +53,22 @@
   color: var(--color-primary, hsl(211, 100%, 50%));
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
-.btn-outline-primary:hover {
+.btn-outline-primary:not(:disabled):hover {
   color: var(--color-text-light, #fff);
   background-color: var(--color-primary, hsl(211, 100%, 50%));
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
-.btn-outline-primary:active {
+.btn-outline-primary:not(:disabled):active {
   color: var(--color-text-light, #fff);
   background-color: var(--color-primary, hsl(211, 100%, 50%));
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
-.btn-outline-primary.js-focus-visible.focus-visible {
+.btn-outline-primary:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-primary-light, hsl(211deg 100% 60%));
+}
+.btn-outline-primary:disabled {
+  color: var(--color-primary-lightest, hsl(211, 100%, 70%));
+  border-color: var(--color-primary-lighter, hsl(211, 100%, 67%));
 }
 
 /* Secondary */
@@ -67,16 +77,20 @@
   background-color: var(--color-secondary, hsl(208, 7%, 46%));
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
-.btn-secondary:hover {
+.btn-secondary:not(:disabled):hover {
   background-color: var(--color-secondary-dark, hsl(208, 7%, 39%));
   border-color: var(--color-secondary-darker, hsl(208, 7%, 36%));
 }
-.btn-secondary:active {
+.btn-secondary:not(:disabled):active {
   background-color: var(--color-secondary-darker, hsl(208, 7%, 36%));
   border-color: var(--color-secondary-darkest, hsl(208, 7%, 33%));
 }
-.btn-secondary.js-focus-visible.focus-visible {
+.btn-secondary:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-secondary-light, hsl(208, 7%, 56%));
+}
+.btn-secondary:disabled {
+  background-color: var(--color-primary-lightest, hsl(208, 7%, 70%));
+  border-color: var(--color-primary-lighter, hsl(208, 7%, 67%));
 }
 
 /* Outline-secondary */
@@ -84,18 +98,22 @@
   color: var(--color-secondary, hsl(208, 7%, 46%));
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
-.btn-outline-secondary:hover {
+.btn-outline-secondary:not(:disabled):hover {
   color: var(--color-text-light, #fff);
   background-color: var(--color-secondary, hsl(208, 7%, 46%));
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
-.btn-outline-secondary:active {
+.btn-outline-secondary:not(:disabled):active {
   color: var(--color-text-light, #fff);
   background-color: var(--color-secondary, hsl(208, 7%, 46%));
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
-.btn-outline-secondary.js-focus-visible.focus-visible {
+.btn-outline-secondary:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-secondary-light, hsl(208, 7%, 56%));
+}
+.btn-outline-secondary:disabled {
+  color: var(--color-primary-lightest, hsl(208, 7%, 70%));
+  border-color: var(--color-primary-lighter, hsl(208, 7%, 67%));
 }
 
 /* Success */
@@ -104,16 +122,20 @@
   background-color: var(--color-success, hsl(134, 61%, 41%));
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
-.btn-success:hover {
+.btn-success:not(:disabled):hover {
   background-color: var(--color-success-dark, hsl(134, 61%, 34%));
   border-color: var(--color-success-darker, hsl(134, 61%, 31%));
 }
-.btn-success:active {
+.btn-success:not(:disabled):active {
   background-color: var(--color-success-darker, hsl(134, 61%, 31%));
   border-color: var(--color-success-darkest, hsl(134, 61%, 30%));
 }
-.btn-success.js-focus-visible.focus-visible {
+.btn-success:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-success-light, hsl(134, 61%, 51%));
+}
+.btn-success:disabled {
+  background-color: var(--color-primary-lightest, hsl(134, 61%, 70%));
+  border-color: var(--color-primary-lighter, hsl(134, 61%, 67%));
 }
 
 /* Outline-success */
@@ -121,18 +143,22 @@
   color: var(--color-success, hsl(134, 61%, 41%));
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
-.btn-outline-success:hover {
+.btn-outline-success:not(:disabled):hover {
   color: var(--color-text-light, #fff);
   background-color: var(--color-success, hsl(134, 61%, 41%));
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
-.btn-outline-success:active {
+.btn-outline-success:not(:disabled):active {
   color: var(--color-text-light, #fff);
   background-color: var(--color-success, hsl(134, 61%, 41%));
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
-.btn-outline-success.js-focus-visible.focus-visible {
+.btn-outline-success:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-success-light, hsl(134, 61%, 51%));
+}
+.btn-outline-success:disabled {
+  color: var(--color-primary-lightest, hsl(134, 61%, 70%));
+  border-color: var(--color-primary-lighter, hsl(134, 61%, 67%));
 }
 
 /* Warning */
@@ -141,16 +167,20 @@
   background-color: var(--color-warning, hsl(45, 100%, 51%));
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
-.btn-warning:hover {
+.btn-warning:not(:disabled):hover {
   background-color: var(--color-warning-dark, hsl(45, 100%, 44%));
   border-color: var(--color-warning-darker, hsl(45, 100%, 41%));
 }
-.btn-warning:active {
+.btn-warning:not(:disabled):active {
   background-color: var(--color-warning-darker, hsl(45, 100%, 41%));
   border-color: var(--color-warning-darkest, hsl(45, 100%, 40%));
 }
-.btn-warning.js-focus-visible.focus-visible {
+.btn-warning:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-warning-light, hsl(45, 100%, 61%));
+}
+.btn-warning:disabled {
+  background-color: var(--color-primary-lightest, hsl(45, 100%, 70%));
+  border-color: var(--color-primary-lighter, hsl(45, 100%, 67%));
 }
 
 /* Outline-warning */
@@ -158,18 +188,22 @@
   color: var(--color-warning, hsl(45, 100%, 51%));
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
-.btn-outline-warning:hover {
+.btn-outline-warning:not(:disabled):hover {
   color: var(--color-text-dark, #212529);
   background-color: var(--color-warning, hsl(45, 100%, 51%));
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
-.btn-outline-warning:active {
+.btn-outline-warning:not(:disabled):active {
   color: var(--color-text-dark, #212529);
   background-color: var(--color-warning, hsl(45, 100%, 51%));
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
-.btn-outline-warning.js-focus-visible.focus-visible {
+.btn-outline-warning:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-warning-light, hsl(45, 100%, 61%));
+}
+.btn-outline-warning:disabled {
+  color: var(--color-primary-lightest, hsl(45, 100%, 70%));
+  border-color: var(--color-primary-lighter, hsl(45, 100%, 67%));
 }
 
 /* Danger */
@@ -178,16 +212,20 @@
   background-color: var(--color-danger, hsl(354, 70%, 50%));
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
-.btn-danger:hover {
+.btn-danger:not(:disabled):hover {
   background-color: var(--color-danger-dark, hsl(354, 70%, 40%));
   border-color: var(--color-danger-darker, hsl(354, 70%, 37%));
 }
-.btn-danger:active {
+.btn-danger:not(:disabled):active {
   background-color: var(--color-danger-darker, hsl(354, 70%, 37%));
   border-color: var(--color-danger-darkest, hsl(354, 70%, 33%));
 }
-.btn-danger.js-focus-visible.focus-visible {
+.btn-danger:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-danger-light, hsl(354, 70%, 60%));
+}
+.btn-danger:disabled {
+  background-color: var(--color-primary-lightest, hsl(354, 70%, 70%));
+  border-color: var(--color-primary-lighter, hsl(354, 70%, 67%));
 }
 
 /* Outline-danger */
@@ -195,18 +233,22 @@
   color: var(--color-danger, hsl(354, 70%, 50%));
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
-.btn-outline-danger:hover {
+.btn-outline-danger:not(:disabled):hover {
   color: var(--color-text-light, #fff);
   background-color: var(--color-danger, hsl(354, 70%, 50%));
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
-.btn-outline-danger:active {
+.btn-outline-danger:not(:disabled):active {
   color: var(--color-text-light, #fff);
   background-color: var(--color-danger, hsl(354, 70%, 50%));
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
-.btn-outline-danger.js-focus-visible.focus-visible {
+.btn-outline-danger:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-danger-light, hsl(354, 70%, 60%));
+}
+.btn-outline-danger:disabled {
+  color: var(--color-primary-lightest, hsl(354, 70%, 70%));
+  border-color: var(--color-primary-lighter, hsl(354, 70%, 67%));
 }
 
 /* light */
@@ -215,16 +257,20 @@
   background-color: var(--color-info, hsl(188, 78%, 50%));
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
-.btn-info:hover {
+.btn-info:not(:disabled):hover {
   background-color: var(--color-info-dark, hsl(188, 78%, 40%));
   border-color: var(--color-info-darker, hsl(188, 78%, 37%));
 }
-.btn-info:active {
+.btn-info:not(:disabled):active {
   background-color: var(--color-info-darker, hsl(188, 78%, 37%));
   border-color: var(--color-info-darkest, hsl(188, 78%, 33%));
 }
-.btn-info.js-focus-visible.focus-visible {
+.btn-info:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-info-light, hsl(188, 78%, 61%));
+}
+.btn-info:disabled {
+  background-color: var(--color-primary-lightest, hsl(188, 78%, 70%));
+  border-color: var(--color-primary-lighter, hsl(188, 78%, 67%));
 }
 
 /* Outline-info */
@@ -232,53 +278,65 @@
   color: var(--color-info, hsl(188, 78%, 50%));
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
-.btn-outline-info:hover {
+.btn-outline-info:not(:disabled):hover {
   color: var(--color-text-light, #fff);
   background-color: var(--color-info, hsl(188, 78%, 50%));
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
-.btn-outline-info:active {
+.btn-outline-info:not(:disabled):active {
   color: var(--color-text-light, #fff);
   background-color: var(--color-info, hsl(188, 78%, 50%));
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
-.btn-outline-info.js-focus-visible.focus-visible {
+.btn-outline-info:not(:disabled).js-focus-visible.focus-visible {
   outline-color: var(--color-info-light, hsl(188, 78%, 61%));
+}
+.btn-outline-info:disabled {
+  color: var(--color-primary-lightest, hsl(188, 78%, 70%));
+  border-color: var(--color-primary-lighter, hsl(188, 78%, 67%));
 }
 
 /* Light */
 .btn-light {
-  color: var(--color-text-dark, #212529);
-  background-color: var(--color-light, hsl(210, 17%, 90%));
-  border-color: var(--color-light, hsl(210, 17%, 90%));
+  color: var(--color-text-light, #fff);
+  background-color: var(--color-light, hsl(210, 17%, 80%));
+  border-color: var(--color-light, hsl(210, 17%, 80%));
 }
-.btn-light:hover {
-  background-color: var(--color-light-dark, hsl(210, 17%, 80%));
-  border-color: var(--color-light-darker, hsl(210, 17%, 77%));
+.btn-light:not(:disabled):hover {
+  background-color: var(--color-light-dark, hsl(210, 17%, 70%));
+  border-color: var(--color-light-darker, hsl(210, 17%, 67%));
 }
-.btn-light:active {
-  background-color: var(--color-light-darker, hsl(210, 17%, 77%));
-  border-color: var(--color-light-darkest, hsl(210, 17%, 73%));
+.btn-light:not(:disabled):active {
+  background-color: var(--color-light-darker, hsl(210, 17%, 67%));
+  border-color: var(--color-light-darkest, hsl(210, 17%, 63%));
 }
-.btn-light.js-focus-visible.focus-visible {
-  outline-color: var(--color-light-dark, hsl(210, 17%, 80%));
+.btn-light:not(:disabled).js-focus-visible.focus-visible {
+  outline-color: var(--color-light-dark, hsl(210, 17%, 70%));
+}
+.btn-light:disabled {
+  background-color: var(--color-primary-lightest, hsl(210, 17%, 90%));
+  border-color: var(--color-primary-lighter, hsl(210, 17%, 87%));
 }
 
 /* Outline-light */
 .btn-outline-light {
-  color: var(--color-light, hsl(210, 17%, 90%));
-  border-color: var(--color-light, hsl(210, 17%, 90%));
+  color: var(--color-light, hsl(210, 17%, 80%));
+  border-color: var(--color-light, hsl(210, 17%, 80%));
 }
-.btn-outline-light:hover {
-  color: var(--color-text-dark, #212529);
-  background-color: var(--color-light, hsl(210, 17%, 90%));
-  border-color: var(--color-light, hsl(210, 17%, 90%));
+.btn-outline-light:not(:disabled):hover {
+  color: var(--color-text-light, #fff);
+  background-color: var(--color-light, hsl(210, 17%, 80%));
+  border-color: var(--color-light, hsl(210, 17%, 80%));
 }
-.btn-outline-light:active {
-  color: var(--color-text-dark, #212529);
-  background-color: var(--color-light, hsl(210, 17%, 90%));
-  border-color: var(--color-light, hsl(210, 17%, 90%));
+.btn-outline-light:not(:disabled):active {
+  color: var(--color-text-light, #fff);
+  background-color: var(--color-light, hsl(210, 17%, 80%));
+  border-color: var(--color-light, hsl(210, 17%, 80%));
 }
-.btn-outline-light.js-focus-visible.focus-visible {
-  outline-color: var(--color-light-dark, hsl(210, 17%, 80%));
+.btn-outline-light:not(:disabled).js-focus-visible.focus-visible {
+  outline-color: var(--color-light-dark, hsl(210, 17%, 70%));
+}
+.btn-outline-light:disabled {
+  color: var(--color-primary-lightest, hsl(210, 17%, 90%));
+  border-color: var(--color-primary-lighter, hsl(210, 17%, 87%));
 }
