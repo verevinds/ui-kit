@@ -1,9 +1,10 @@
 /* eslint-disable react/button-has-type */
-import './button.css';
 import 'focus-visible';
 
 import cn from 'classnames';
 import React, { ButtonHTMLAttributes } from 'react';
+
+import styles from './button.css';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?:
@@ -28,10 +29,16 @@ const Button: React.FC<ButtonProps> = props => {
   const { children, variant = 'primary', icon } = props;
   return (
     <button
-      className={cn('btn', `btn-${variant}`, 'js-focus-visible')}
+      className={cn(
+        styles['btn'],
+        styles[`btn-${variant}`],
+        'js-focus-visible',
+      )}
       {...props}
     >
-      {icon && <span className={cn(children && 'btn-icon')}>{icon}</span>}
+      {icon && (
+        <span className={cn(children && styles['btn-icon'])}>{icon}</span>
+      )}
       <span>{children}</span>
     </button>
   );
