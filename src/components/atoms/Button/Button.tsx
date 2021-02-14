@@ -24,7 +24,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: JSX.Element;
 };
 
-const Button: React.FC<ButtonProps> = props => {
+export const Button: React.FC<ButtonProps> = props => {
   const { children, variant = 'primary', icon, className } = props;
   return (
     <button
@@ -41,5 +41,3 @@ const Button: React.FC<ButtonProps> = props => {
     </button>
   );
 };
-
-export default Button;
