@@ -13,8 +13,8 @@ export default {
 const Template: Story<ImageUploadingViewProps> = args => {
   const [state, setState] = useState([]);
   return (
-    <div style={{width: '500px'}}>
-      <ImageUploadingAdd callback={setState} initialImages={state}/>
+    <div style={{ ['backgroundColor']: 'aqua' }}>
+      <ImageUploadingAdd callback={setState} initialImages={state} />
       <ImageUploadingView {...args} initialImages={state} callback={setState} />
     </div>
   );

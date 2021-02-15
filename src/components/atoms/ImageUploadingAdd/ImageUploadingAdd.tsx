@@ -5,20 +5,28 @@ import './imageuploadingadd.css';
 
 export type ImageUploadingAddProps = {
   initialImages?: ImageListType;
-  callback: Dispatch<SetStateAction<never[]>>
+  callback: Dispatch<SetStateAction<never[]>>;
+  acceptType?: string[];
+  maxNumber?: number;
 };
 
-export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({ initialImages, callback }) => {
+export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({
+  initialImages,
+  callback,
+  acceptType = ['jpg', 'jpeg', 'webp', 'avif'],
+  maxNumber = 69,
+}) => {
   const [images, setImages] = useState<ImageListType>([]);
-  useEffect(()=>{
-    if(initialImages) setImages(initialImages);
-  },[initialImages])
-  const maxNumber = 69;
-  const onChange = (imageList: ImageListType) => {
 
+  useEffect(() => {
+    if (initialImages) setImages(initialImages);
+  }, [initialImages]);
+
+  const onChange = (imageList: ImageListType) => {
     if (callback) callback(imageList as never[]);
     setImages(imageList as never[]);
   };
+
   return (
     <ReactImageUploading
       multiple
@@ -27,11 +35,7 @@ export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({ initialIma
       maxNumber={maxNumber}
       dataURLKey='data_url'
     >
-      {({
-        onImageUpload,
-        isDragging,
-        dragProps,
-      }) => (
+      {({ onImageUpload, isDragging, dragProps }) => (
         <div className='upload-add'>
           <button
             type='button'
