@@ -9,7 +9,7 @@
   ],
   "typings": "dist/index.d.ts",
   "scripts": {
-    "up-and-publish": "npm run clean && lint-staged && npm run build && npm version patch && npm publish",
+    "patch-and-publish": "npm run clean && lint-staged && npm run build && npm version patch && npm publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "eslint": "eslint --debug ./ --fix",
