@@ -29,6 +29,9 @@
   vertical-align: -0.125em;
   width: 1em;
 }
+.btn-icon svg {
+  vertical-align: initial
+}
 .btn-icon-children {
   margin-right: 0.5em;
 }

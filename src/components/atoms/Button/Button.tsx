@@ -1,7 +1,6 @@
 /* eslint-disable react/button-has-type */
 import 'focus-visible';
 import './button.css';
-
 import cn from 'classnames';
 import React, { ButtonHTMLAttributes } from 'react';
 
