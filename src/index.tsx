@@ -1,2 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-export { Button } from './components/atoms/Button/Button';
+import { Button } from '@atoms/Button/Button';
+
+export { Button };

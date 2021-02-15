@@ -1,12 +1,12 @@
 /* eslint-disable react/button-has-type */
 import 'focus-visible';
 import './button.css';
-
 import cn from 'classnames';
 import React, { ButtonHTMLAttributes } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?:
+    | 'transparent'
     | 'primary'
     | 'secondary'
     | 'success'
@@ -24,7 +24,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: JSX.Element;
 }
 
-const Button: React.FC<ButtonProps> = props => {
+export const Button: React.FC<ButtonProps> = props => {
   const { children, variant = 'primary', icon, className } = props;
   return (
     <button
@@ -36,8 +36,8 @@ const Button: React.FC<ButtonProps> = props => {
         className && className,
       )}
     >
-      {icon && <span className={cn(children && 'btn-icon')}>{icon}</span>}
-      <span>{children}</span>
+      {icon && <span className={cn('btn-icon', children && 'btn-icon-children')}>{icon}</span>}
+      {children && <span>{children}</span>}
     </button>
   );
 };

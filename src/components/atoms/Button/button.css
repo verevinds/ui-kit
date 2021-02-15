@@ -1,11 +1,13 @@
 .btn {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.375em 0.75em;
   color: var(--color-text-dark, #212529);
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5;
   text-align: center;
+  align-content: center;
+  justify-content: center;
   vertical-align: middle;
   background-color: transparent;
   border: 1px solid transparent;
@@ -20,10 +22,25 @@
   cursor: pointer;
 }
 .btn-icon {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.btn-icon svg {
+  vertical-align: initial
+}
+.btn-icon-children {
   margin-right: 0.5em;
 }
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+.btn-transparent {
+  background-color: transparent;
+  border-color: transparent;
 }
 
 /* Primary */

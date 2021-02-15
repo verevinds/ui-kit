@@ -1,9 +1,5 @@
 .husky
 .next
 node_modules
-lib
+next.config.js
 tsconfig.json
-storybook-static
-.storybook
-src/stories
-dist
