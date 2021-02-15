@@ -34,7 +34,7 @@ export const ImageUploadingView = ({ initialImages, callback }) => {
       dataURLKey='data_url'
     >
       {({ imageList, onImageUpdate, onImageRemove }) => (
-          <Slider slidesPerView='auto' className='upload-view' navigation={
+          <Slider slidesPerView='auto' spaceBetween={10} className='upload-view' navigation={
             {
               disabledClass: 'upload-view__arrow-disabled',
             }
