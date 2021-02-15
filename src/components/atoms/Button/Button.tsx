@@ -37,7 +37,7 @@ export const Button: React.FC<ButtonProps> = props => {
         className && className,
       )}
     >
-      {icon ? <span className={cn(children && 'btn-icon')}>{icon}</span> : icon}
+      {icon && children?<span className={cn('btn-icon')}>{icon}</span> : icon}
       {children && <span>{children}</span>}
     </button>
   );
