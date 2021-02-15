@@ -1,0 +1,39 @@
+.upload-view {
+  overflow: hidden;
+}
+.upload-view__arrow-disabled {
+  display: none !important;
+}
+.upload-view .swiper-wrapper {
+  display: inline-flex;
+}
+.upload-view__image-item {
+  position: relative;
+  height:150px;
+  width: 150px;
+}
+.upload-view__image-item:first-child {
+  margin-left: 0;
+}
+.upload-view__image-item:last-child {
+  margin-right: 0;
+}
+.upload-view__image {
+  object-fit: cover;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+.upload-view__btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+.upload-view__btn {
+  margin: 0.6em;
+}
