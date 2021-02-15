@@ -22,6 +22,14 @@
   cursor: pointer;
 }
 .btn-icon {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.btn-icon-children {
   margin-right: 0.5em;
 }
 .js-focus-visible :focus:not(.focus-visible) {
