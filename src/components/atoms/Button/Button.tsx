@@ -5,8 +5,9 @@ import './button.css';
 import cn from 'classnames';
 import React, { ButtonHTMLAttributes } from 'react';
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?:
+    | 'transparent'
     | 'primary'
     | 'secondary'
     | 'success'
@@ -22,7 +23,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     | 'outline-info'
     | 'outline-light';
   icon?: JSX.Element;
-};
+}
 
 const Button: React.FC<ButtonProps> = props => {
   const { children, variant = 'primary', icon, className } = props;
@@ -41,5 +42,4 @@ const Button: React.FC<ButtonProps> = props => {
     </button>
   );
 };
-
 export default Button;
