@@ -22,7 +22,7 @@ export type InputProps = InputHTMLAttributes<Element> & {
 };
 
 export const Input: React.FC<InputProps> = props => {
-  const { variant = 'primary', onClick, error, icon, text, ...restProps } = props;
+  const { variant = 'primary', onClick, error, icon, text, className, ...restProps } = props;
   const [focus, setFocus] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ export const Input: React.FC<InputProps> = props => {
           `inpt-${variant}`,
           focus && 'inpt-focus',
           error && 'inpt-error',
-          restProps.className
+          className
         )}
       >
         <input
