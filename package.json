@@ -1,6 +1,6 @@
 {
   "name": "@verevinds/ui-kit",
-  "version": "1.0.52",
+  "version": "1.0.53",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "jsnext:main": "dist/index.esm.js",
