@@ -22,7 +22,7 @@ export type InputProps = InputHTMLAttributes<Element> & {
 };
 
 export const Input: React.FC<InputProps> = props => {
-  const { variant, onClick, error, icon, text, ...restProps } = props;
+  const { variant = 'primary', onClick, error, icon, text, ...restProps } = props;
   const [focus, setFocus] = useState(false);
 
   return (
