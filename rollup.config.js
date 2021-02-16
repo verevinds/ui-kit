@@ -23,23 +23,12 @@ export default commandLineArgs => {
       {
         file: pkg.main,
         format: 'cjs',
+        exports: 'named',
         sourcemap: true,
       },
 
     ],
     plugins: [
-      external(),
-      builtins(),
-      resolve({
-        preferBuiltins: false,
-      }),
-      commonjs({
-        extensions: ['.js', '.ts'],
-        include: /node_modules/,
-        ignoreGlobal: true,
-      }),
-      globals(),
-      json(),
       typescript({
         typescript: require('typescript'),
         objectHashIgnoreUnknownHack: true,
@@ -50,11 +39,10 @@ export default commandLineArgs => {
       postcss({
         extensions: ['.css', '.scss'],
         plugins: [autoprefixer, postcssShort],
-        extract: 'dist/styles.global.css',
+        extract: 'styles.global.css',
         modules: { generateScopedName: '[local]' },
         minimize: true,
       }),
-      isProduction && strip(),
       isProduction &&
         terser({
           output: {
