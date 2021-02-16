@@ -20,7 +20,7 @@
 }
 .upload-add__btn-click {
   margin-top: 0.5em;
-  color: var(--color-text-light,#008BFF);
+  color: var(--color-text-primary-light,#008BFF);
   border: 1px solid var(--color-primary,#008BFF);
   display: inline-block;
   padding: 8px 14px;

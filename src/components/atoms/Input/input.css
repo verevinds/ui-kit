@@ -16,6 +16,7 @@
   padding: .2em .3em;
   border-top-left-radius: var(--radius, 4px);
   border-bottom-left-radius: var(--radius, 4px);
+  color: var(--color-text-primary-primary, #434b5b);
 
   border: 1px solid transparent;
 }
@@ -39,7 +40,7 @@
 }
 .inpt__label {
   margin-top: 1px;
-  color: var(--color-text-danger, #d92638);
+  color: var(--color-text-primary-danger, #d92638);
   font-size: 0.8em;
   animation: vision ease-in-out 200ms;
 }
@@ -47,7 +48,7 @@
   outline: none;
 }
 .inpt-focus {
-  outline-color: var(--color-light-dark, hsl(210, 17%, 70%));
+  background-color: var(--color-light-dark, hsl(210, 17%, 70%));
 }
 .inpt-error {
   background-color: var(--color-danger, hsl(354, 70%, 50%));

@@ -77,7 +77,7 @@
 .upload-view .swiper-button-prev:after,
 .upload-view .swiper-button-next:after {
   margin: auto;
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   font-size: 1.5rem !important;
   transform: translateX(25%);
 }

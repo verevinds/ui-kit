@@ -1,7 +1,7 @@
 .btn {
   display: inline-flex;
   padding: 0.375em 0.75em;
-  color: var(--color-text-dark, #212529);
+  color: var(--color-text-primary-dark, #212529);
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5;
@@ -45,7 +45,7 @@
 
 /* Primary */
 .btn-primary {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-primary, hsl(211, 100%, 50%));
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
@@ -71,12 +71,12 @@
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
 .btn-outline-primary:not(:disabled):hover {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-primary, hsl(211, 100%, 50%));
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
 .btn-outline-primary:not(:disabled):active {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-primary, hsl(211, 100%, 50%));
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
@@ -90,7 +90,7 @@
 
 /* Secondary */
 .btn-secondary {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-secondary, hsl(208, 7%, 46%));
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
@@ -116,12 +116,12 @@
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
 .btn-outline-secondary:not(:disabled):hover {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-secondary, hsl(208, 7%, 46%));
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
 .btn-outline-secondary:not(:disabled):active {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-secondary, hsl(208, 7%, 46%));
   border-color: var(--color-secondary, hsl(208, 7%, 46%));
 }
@@ -135,7 +135,7 @@
 
 /* Success */
 .btn-success {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-success, hsl(134, 61%, 41%));
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
@@ -161,12 +161,12 @@
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
 .btn-outline-success:not(:disabled):hover {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-success, hsl(134, 61%, 41%));
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
 .btn-outline-success:not(:disabled):active {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-success, hsl(134, 61%, 41%));
   border-color: var(--color-success, hsl(134, 61%, 41%));
 }
@@ -180,7 +180,7 @@
 
 /* Warning */
 .btn-warning {
-  color: var(--color-text-dark, #212529);
+  color: var(--color-text-primary-dark, #212529);
   background-color: var(--color-warning, hsl(45, 100%, 51%));
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
@@ -206,12 +206,12 @@
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
 .btn-outline-warning:not(:disabled):hover {
-  color: var(--color-text-dark, #212529);
+  color: var(--color-text-primary-dark, #212529);
   background-color: var(--color-warning, hsl(45, 100%, 51%));
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
 .btn-outline-warning:not(:disabled):active {
-  color: var(--color-text-dark, #212529);
+  color: var(--color-text-primary-dark, #212529);
   background-color: var(--color-warning, hsl(45, 100%, 51%));
   border-color: var(--color-warning, hsl(45, 100%, 51%));
 }
@@ -225,7 +225,7 @@
 
 /* Danger */
 .btn-danger {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-danger, hsl(354, 70%, 50%));
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
@@ -251,12 +251,12 @@
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
 .btn-outline-danger:not(:disabled):hover {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-danger, hsl(354, 70%, 50%));
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
 .btn-outline-danger:not(:disabled):active {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-danger, hsl(354, 70%, 50%));
   border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
@@ -270,7 +270,7 @@
 
 /* light */
 .btn-info {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-info, hsl(188, 78%, 50%));
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
@@ -296,12 +296,12 @@
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
 .btn-outline-info:not(:disabled):hover {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-info, hsl(188, 78%, 50%));
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
 .btn-outline-info:not(:disabled):active {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-info, hsl(188, 78%, 50%));
   border-color: var(--color-info, hsl(188, 78%, 50%));
 }
@@ -315,7 +315,7 @@
 
 /* Light */
 .btn-light {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-light, hsl(210, 17%, 80%));
   border-color: var(--color-light, hsl(210, 17%, 80%));
 }
@@ -341,12 +341,12 @@
   border-color: var(--color-light, hsl(210, 17%, 80%));
 }
 .btn-outline-light:not(:disabled):hover {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-light, hsl(210, 17%, 80%));
   border-color: var(--color-light, hsl(210, 17%, 80%));
 }
 .btn-outline-light:not(:disabled):active {
-  color: var(--color-text-light, #fff);
+  color: var(--color-text-primary-light, #fff);
   background-color: var(--color-light, hsl(210, 17%, 80%));
   border-color: var(--color-light, hsl(210, 17%, 80%));
 }
