@@ -25,16 +25,8 @@ export default commandLineArgs => {
         format: 'cjs',
         sourcemap: true,
       },
-      {
-        file: pkg.module,
-        format: 'esm',
-        sourcemap: true,
-      },
+
     ],
-    onwarn(warning, warn) {
-      if (warning.code === 'EVAL') return;
-      warn(warning);
-    },
     plugins: [
       external(),
       builtins(),
@@ -70,5 +62,6 @@ export default commandLineArgs => {
           },
         }),
     ],
+    external: ['react', 'react-dom']
   };
 };
