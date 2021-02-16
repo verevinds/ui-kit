@@ -1,7 +1,7 @@
 
 import { Story } from '@storybook/react/types-6-0';
-import type { ImageUploadingAddProps } from './ImageUploadingAdd';
-import ImageUploadingAdd from './ImageUploadingAdd';
+import type { ImageUploadingAddProps } from './';
+import ImageUploadingAdd from './';
 import React from 'react';
 
 

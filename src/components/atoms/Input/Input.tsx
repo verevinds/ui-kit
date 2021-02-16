@@ -1,11 +1,11 @@
-import React, { InputHTMLAttributes, useState } from 'react';
+import React, { InputHTMLAttributes, MouseEventHandler, useState } from 'react';
 import { FieldError, UseFormMethods } from 'react-hook-form';
 import 'focus-visible';
 import cn from 'classnames';
 import './input.css';
 
 export type CustomError = FieldError | undefined;
-export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+export type InputProps = InputHTMLAttributes<Element> & {
   variant?:
     | 'transparent'
     | 'primary'
@@ -20,7 +20,7 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   text?: string;
 } & Pick<UseFormMethods<{}>, 'register'>;
 
-export const Input = (props, ref) => {
+export const Input: React.FC<InputProps> = (props) => {
   const { variant, onClick, error, icon, text, ...restProps } = props;
   const [focus, setFocus] = useState(false);
 

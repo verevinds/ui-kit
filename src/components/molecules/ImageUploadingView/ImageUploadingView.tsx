@@ -2,7 +2,6 @@ import React, {
   SetStateAction,
   useCallback,
   useEffect,
-  useRef,
   useState,
 } from 'react';
 import ReactImageUploading, {
