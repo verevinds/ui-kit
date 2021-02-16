@@ -18,7 +18,8 @@ export type InputProps = InputHTMLAttributes<Element> & {
   icon?: JSX.Element;
   error?: string;
   text?: string;
-} & Pick<UseFormMethods<{}>, 'register'>;
+  register?: Pick<UseFormMethods<{}>, 'register'>
+};
 
 export const Input: React.FC<InputProps> = (props) => {
   const { variant, onClick, error, icon, text, ...restProps } = props;

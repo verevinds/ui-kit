@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react/types-6-0';
-import type { InputProps } from './Input';
-import Input from './Input';
+import type { InputProps } from './';
+import Input from './';
 import React, { useEffect, useMemo, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +42,6 @@ const Template: Story<InputProps> = args => {
           });
           setValue('test', value)
         }}
-
       />
       <button type='submit'>Ok
       </button>
@@ -57,7 +56,7 @@ Default.args = {
   variant: 'primary',
   icon: <FontAwesomeIcon icon={faSearch} />,
   placeholder: 'Тестовый текст',
-  text: 'Поиск',
+  text: 'Поиск'
 };
 
 export const Empty = Template.bind({});
