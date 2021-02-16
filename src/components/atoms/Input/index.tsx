@@ -33,11 +33,12 @@ export const Input: React.FC<InputProps> = props => {
           `inpt-${variant}`,
           focus && 'inpt-focus',
           error && 'inpt-error',
+          restProps.className
         )}
       >
         <input
           {...restProps}
-          className={cn('inpt__input', restProps.className, 'js-focus-visible')}
+          className={cn('inpt__input', 'js-focus-visible')}
           onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
         />
