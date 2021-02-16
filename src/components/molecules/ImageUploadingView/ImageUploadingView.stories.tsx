@@ -2,7 +2,7 @@ import { Story } from '@storybook/react/types-6-0';
 import type { ImageUploadingViewProps } from './ImageUploadingView';
 import ImageUploadingView from './ImageUploadingView';
 import React, { useState } from 'react';
-import ImageUploadingAdd from '../../atoms/ImageUploadingAdd/ImageUploadingAdd';
+import ImageUploadingAdd from '../../atoms/ImageUploadingAdd/';
 
 export default {
   title: 'ImageUploadingView',
