@@ -1,8 +1,8 @@
-import React, { InputHTMLAttributes, MouseEventHandler, useState } from 'react';
+import React, { InputHTMLAttributes, useState } from 'react';
 import { FieldError, UseFormMethods } from 'react-hook-form';
 import 'focus-visible';
 import cn from 'classnames';
-import './input.css';
+import './input.scss';
 
 export type CustomError = FieldError | undefined;
 export type InputProps = InputHTMLAttributes<Element> & {
@@ -18,10 +18,10 @@ export type InputProps = InputHTMLAttributes<Element> & {
   icon?: JSX.Element;
   error?: string;
   text?: string;
-  register?: Pick<UseFormMethods<{}>, 'register'>
+  register?: Pick<UseFormMethods<{}>, 'register'>;
 };
 
-export const Input: React.FC<InputProps> = (props) => {
+export const Input: React.FC<InputProps> = props => {
   const { variant, onClick, error, icon, text, ...restProps } = props;
   const [focus, setFocus] = useState(false);
 
@@ -52,5 +52,7 @@ export const Input: React.FC<InputProps> = (props) => {
     </div>
   );
 };
+
+Input.displayName = 'Input';
 
 export default Input;

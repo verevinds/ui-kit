@@ -1,24 +1,15 @@
-import React, {
-  SetStateAction,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react';
+import React, { SetStateAction, useCallback, useEffect, useState } from 'react';
 import ReactImageUploading, {
   ImageType,
   ImageUploadingPropsType,
 } from 'react-images-uploading';
 import type { ImageListType } from 'react-images-uploading';
-import './imageuploadingview.css';
+import './imageuploadingview.scss';
 import { Button } from '../../atoms/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import SwiperCore, { Navigation, Pagination, Virtual } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import 'swiper/components/pagination/pagination.min.css';
 import { ExportInterface } from 'react-images-uploading/dist/typings';
 
 SwiperCore.use([Pagination, Navigation, Virtual]);
@@ -29,13 +20,13 @@ export type ImageUploadingViewProps = {
   acceptType?: string[];
   maxNumber?: number;
 };
-export const ImageUploadingView = ({
+export const ImageUploadingView: React.FC<ImageUploadingViewProps> = ({
   initialImages,
   callback,
   acceptType = ['jpg', 'jpeg', 'webp', 'avif'],
   maxNumber = 69,
 }) => {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<ImageListType>([]);
 
   useEffect(() => {
     setImages(initialImages);

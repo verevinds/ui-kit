@@ -13,7 +13,7 @@
   display: flex;
   flex: 1;
   width: 100%;
-  padding: .2em .3em;
+  padding: 0.2em 0.3em;
   border-top-left-radius: var(--radius, 4px);
   border-bottom-left-radius: var(--radius, 4px);
   color: var(--color-text-primary-primary, #434b5b);
@@ -22,17 +22,17 @@
 }
 .inpt__button {
   display: inline-flex;
-  flex:0;
+  flex: 0;
   background-color: transparent;
   border: none;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   text-align: left;
   color: var(--colot-text-light, #fff);
   cursor: pointer;
   align-items: center;
 }
 .inpt__icon {
-  margin-right: .8em;
+  margin-right: 0.8em;
 }
 .inpt__text {
   font-weight: 600;
@@ -58,5 +58,5 @@
   background-color: var(--color-primary, hsl(211, 100%, 50%));
 }
 .inpt-primary.inpt-focus {
-  background-color: var(--color-primary-light, hsl(211deg 100% 60%));
+  background-color: var(--color-primary-light, hsl(211, 100%, 60%));
 }

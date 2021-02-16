@@ -1,7 +1,8 @@
+import React from 'react';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import type { ImageListType } from 'react-images-uploading';
 import ReactImageUploading from 'react-images-uploading';
-import './imageuploadingadd.css';
+import './imageuploadingadd.scss';
 
 export type ImageUploadingAddProps = {
   initialImages?: ImageListType;
@@ -33,6 +34,7 @@ export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({
       value={images}
       onChange={onChange}
       maxNumber={maxNumber}
+      acceptType={acceptType}
       dataURLKey='data_url'
     >
       {({ onImageUpload, isDragging, dragProps }) => (

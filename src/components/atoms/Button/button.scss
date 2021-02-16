@@ -30,7 +30,7 @@
   width: 1em;
 }
 .btn-icon svg {
-  vertical-align: initial
+  vertical-align: initial;
 }
 .btn-icon-children {
   margin-right: 0.5em;
@@ -58,7 +58,7 @@
   border-color: var(--color-primary-darkest, hsl(211, 100%, 37%));
 }
 .btn-primary:not(:disabled).js-focus-visible.focus-visible {
-  outline-color: var(--color-primary-light, hsl(211deg 100% 60%));
+  outline-color: var(--color-primary-light, hsl(211, 100%, 60%));
 }
 .btn-primary:disabled {
   background-color: var(--color-primary-lightest, hsl(211, 100%, 70%));
@@ -81,7 +81,7 @@
   border-color: var(--color-primary, hsl(211, 100%, 50%));
 }
 .btn-outline-primary:not(:disabled).js-focus-visible.focus-visible {
-  outline-color: var(--color-primary-light, hsl(211deg 100% 60%));
+  outline-color: var(--color-primary-light, hsl(211, 100%, 60%));
 }
 .btn-outline-primary:disabled {
   color: var(--color-primary-lightest, hsl(211, 100%, 70%));

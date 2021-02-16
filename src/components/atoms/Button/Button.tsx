@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import 'focus-visible';
-import './button.css';
+import './button.scss';
 import cn from 'classnames';
 import React, { ButtonHTMLAttributes } from 'react';
 
@@ -36,7 +36,11 @@ export const Button: React.FC<ButtonProps> = props => {
         className && className,
       )}
     >
-      {icon && <span className={cn('btn-icon', children && 'btn-icon-children')}>{icon}</span>}
+      {icon && (
+        <span className={cn('btn-icon', children && 'btn-icon-children')}>
+          {icon}
+        </span>
+      )}
       {children && <span>{children}</span>}
     </button>
   );
