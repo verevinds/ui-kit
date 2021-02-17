@@ -8,11 +8,11 @@ import './imageuploadingview.scss';
 import { Button } from '../../atoms/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
-import SwiperCore, { Navigation, Pagination, Virtual } from 'swiper';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ExportInterface } from 'react-images-uploading/dist/typings';
 
-SwiperCore.use([Pagination, Navigation, Virtual]);
+SwiperCore.use([Pagination, Navigation]);
 
 export type ImageUploadingViewProps = {
   initialImages: ImageListType;
@@ -44,7 +44,7 @@ export const ImageUploadingView: React.FC<ImageUploadingViewProps> = ({
       image: ImageType,
       index: number,
     ) => (
-      <SwiperSlide key={image['data_url']} virtualIndex={index}>
+      <SwiperSlide key={image['data_url']}>
         <div key={image.dataURL} className='upload-view__image-item'>
           <img
             src={image['data_url']}
@@ -84,7 +84,6 @@ export const ImageUploadingView: React.FC<ImageUploadingViewProps> = ({
         navigation
         pagination={{ clickable: true }}
         className='upload-view'
-        virtual
       >
         {imageList.map(renderItem({ onImageUpdate, onImageRemove }))}
       </Swiper>
