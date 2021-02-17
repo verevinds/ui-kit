@@ -38,7 +38,6 @@ export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({
       dataURLKey='data_url'
     >
       {({ onImageUpload, isDragging, dragProps }) => (
-        <div className='upload-add'>
           <button
             type='button'
             style={isDragging ? { color: 'red' } : undefined}
@@ -50,7 +49,6 @@ export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({
             <span className={'upload-add__btn-text'}>или</span>
             <span className={'upload-add__btn-click'}>Нажмите</span>
           </button>
-        </div>
       )}
     </ReactImageUploading>
   );
