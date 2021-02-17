@@ -94,7 +94,9 @@
 .upload-view .swiper-button-disabled {
   display: none;
 }
-
+.upload-view .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+  background-color: var(--color-secondary, #78a5a3);
+}
 @media screen and (max-width: 576) {
   .upload-view .swiper-button-prev,
   .upload-view .swiper-button-next {

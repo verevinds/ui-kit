@@ -82,7 +82,7 @@ export const ImageUploadingView: React.FC<ImageUploadingViewProps> = ({
         slidesPerView='auto'
         watchOverflow={true}
         navigation
-        pagination={{ clickable: true }}
+        pagination={{ clickable: true, dynamicBullets: true}}
         className='upload-view'
       >
         {imageList.map(renderItem({ onImageUpdate, onImageRemove }))}
