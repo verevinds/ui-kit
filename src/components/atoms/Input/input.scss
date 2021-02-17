@@ -1,6 +1,7 @@
 .inpt-wrapper {
   display: flex;
   flex-direction: column;
+  min-height: 43px;
 }
 .inpt {
   box-sizing: border-box;
@@ -42,7 +43,7 @@
   margin-top: 1px;
   color: var(--color-text-primary-danger, #d92638);
   font-size: 0.8em;
-  animation: vision ease-in-out 200ms;
+  animation: visionError ease-in 200ms;
 }
 .js-focus-visible .inpt__input:focus {
   outline: none;
@@ -59,4 +60,13 @@
 }
 .inpt-primary.inpt-focus {
   background-color: var(--color-primary-light, hsl(211, 100%, 60%));
+}
+
+@keyframes visionError {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
