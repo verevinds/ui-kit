@@ -58,11 +58,11 @@ export const Input: React.FC<InputProps> = props => {
           )}
           placeholder={title ? undefined : placeholder}
           onFocus={() => setFocus(true)}
-          onBlur={({target}) => {
+          onBlur={({ target }) => {
             const { value } = target;
 
-            if(value) toggleNoEmpty(true);
-              else toggleNoEmpty(false);
+            if (value) toggleNoEmpty(true);
+            else toggleNoEmpty(false);
 
             setFocus(false);
           }}
@@ -71,14 +71,24 @@ export const Input: React.FC<InputProps> = props => {
         {title && (
           <label
             htmlFor={name}
-            className={cn('inpt__title', (focus || noEmpty) && 'inpt__title-focus')}
+            className={cn(
+              'inpt__title',
+              (focus || noEmpty) && 'inpt__title-focus',
+            )}
           >
             {title}
           </label>
         )}
         {(icon || text) && (
-          <button type='button' className={cn('inpt__button', focus && title && 'inpt__button-focus')} onClick={onClick}>
-            <span className='inpt__icon'>{icon}</span>
+          <button
+            type='button'
+            className={cn(
+              'inpt__button',
+              focus && title && 'inpt__button-focus',
+            )}
+            onClick={onClick}
+          >
+            <span className={cn(text && 'inpt__icon')}>{icon}</span>
             <span className='inpt__text'>{text}</span>
           </button>
         )}
