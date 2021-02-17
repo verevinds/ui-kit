@@ -4,14 +4,16 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 1.5em 4em;
+  padding: 2% 6%;
   color: #97A1A8;
   background: #fff;
   border: 2px dashed #C8CBCE;
   text-align: center;
+  font-size: calc(1rem + (14 - 10) * ( (100vw - 480px) / ( 1024 - 480) ))
+
 }
 .upload-add__btn-drop-drag {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
 }
 .upload-add__btn-text {
@@ -29,7 +31,7 @@
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
-  font-size: 1em;
+  font-size: .8em;
   font-weight: bold;
   border-radius: 3px;
   vertical-align: middle;
