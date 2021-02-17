@@ -94,6 +94,9 @@
 .upload-view .swiper-button-disabled {
   display: none;
 }
+.upload-view .swiper-pagination-bullet {
+  background-color: var(--color-secondary-light, hsl(177, 20%, 66%));
+}
 .upload-view .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
   background-color: var(--color-secondary, #78a5a3);
 }
