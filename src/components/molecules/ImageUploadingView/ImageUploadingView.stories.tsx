@@ -3,6 +3,10 @@ import type { ImageUploadingViewProps } from './ImageUploadingView';
 import ImageUploadingView from './ImageUploadingView';
 import React, { useState } from 'react';
 import ImageUploadingAdd from '../../atoms/ImageUploadingAdd/';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/effect-fade/effect-fade.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 
 export default {
   title: 'ImageUploadingView',
