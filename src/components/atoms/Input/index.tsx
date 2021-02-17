@@ -88,7 +88,7 @@ export const Input: React.FC<InputProps> = props => {
             )}
             onClick={onClick}
           >
-            <span className={cn(text && 'inpt__icon')}>{icon}</span>
+            <span className={cn('inpt__icon', text && 'inpt__icon-with-text')}>{icon}</span>
             <span className='inpt__text'>{text}</span>
           </button>
         )}

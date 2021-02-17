@@ -57,7 +57,7 @@
   flex: 0;
   background-color: transparent;
   border: none;
-  padding: 0 0.5em;
+  padding: 0 0.8em;
   text-align: left;
   color: var(--colot-text-light, #fff);
   cursor: pointer;
@@ -66,7 +66,9 @@
   height: 100%;
 }
 .inpt__icon {
-  margin-right: 0.8em;
+  &-with-text{
+    margin-right: 0.8em;
+  }
 }
 .inpt__text {
   font-weight: 600;
