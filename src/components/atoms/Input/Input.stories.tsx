@@ -64,3 +64,17 @@ export const Empty = Template.bind({});
 Empty.args = {
   disabled: false,
 };
+
+export const WithTitle = Template.bind({});
+
+WithTitle.args = {
+  disabled: false,
+  title: 'Заголовок'
+};
+export const WithTitleAdnButton = Template.bind({});
+
+WithTitleAdnButton.args = {
+  disabled: false,
+  title: 'Заголовок',
+  icon: <FontAwesomeIcon icon={faSearch} />,
+};

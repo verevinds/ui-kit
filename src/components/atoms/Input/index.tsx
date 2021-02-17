@@ -22,9 +22,20 @@ export type InputProps = InputHTMLAttributes<Element> & {
 };
 
 export const Input: React.FC<InputProps> = props => {
-  const { variant = 'primary', onClick, error, icon, text, className, ...restProps } = props;
+  const {
+    variant = 'primary',
+    onClick,
+    error,
+    icon,
+    text,
+    title,
+    className,
+    name,
+    placeholder,
+    ...restProps
+  } = props;
   const [focus, setFocus] = useState(false);
-
+  const [noEmpty, toggleNoEmpty] = useState(false);
   return (
     <div className='inpt-wrapper'>
       <div
@@ -33,17 +44,40 @@ export const Input: React.FC<InputProps> = props => {
           `inpt-${variant}`,
           focus && 'inpt-focus',
           error && 'inpt-error',
-          className
+          className,
         )}
       >
         <input
           {...restProps}
-          className={cn('inpt__input', 'js-focus-visible')}
+          id={name}
+          name={name}
+          className={cn(
+            'inpt__input',
+            'js-focus-visible',
+            (focus || noEmpty) && title && 'inpt__input-focus',
+          )}
+          placeholder={title ? undefined : placeholder}
           onFocus={() => setFocus(true)}
-          onBlur={() => setFocus(false)}
+          onBlur={({target}) => {
+            const { value } = target;
+
+            if(value) toggleNoEmpty(true);
+              else toggleNoEmpty(false);
+
+            setFocus(false);
+          }}
+          autoComplete='off'
         />
+        {title && (
+          <label
+            htmlFor={name}
+            className={cn('inpt__title', (focus || noEmpty) && 'inpt__title-focus')}
+          >
+            {title}
+          </label>
+        )}
         {(icon || text) && (
-          <button type='button' className={'inpt__button'} onClick={onClick}>
+          <button type='button' className={cn('inpt__button', focus && title && 'inpt__button-focus')} onClick={onClick}>
             <span className='inpt__icon'>{icon}</span>
             <span className='inpt__text'>{text}</span>
           </button>

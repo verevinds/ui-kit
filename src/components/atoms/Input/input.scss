@@ -2,24 +2,55 @@
   display: flex;
   flex-direction: column;
   min-height: 43px;
+  overflow: hidden;
 }
 .inpt {
+  position: relative;
   box-sizing: border-box;
   display: flex;
   padding: 2px;
   background-color: var(--color-light, hsl(210, 17%, 80%));
   border-radius: var(--radius, 4px);
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  height: 37px;
+}
+.inpt__title {
+  position: absolute;
+  padding: 0.5em 0.3em;
+
+  color: var(--color-text-primary, #434b5b);
+  font-weight: 100;
+  transition-property: transform, font-size;
+  transition-timing-function: linear;
+  transition-duration: 300ms, 300ms;
+  &-focus{
+    font-size: 0.8em;
+    transform: translateY(1.9em);
+    padding: 0 0.6em;
+    text-transform: lowercase;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--colot-text-light, #fff);
+    background-color: var(--color-primary-light, hsl(211, 100%, 60%));
+}
 }
 .inpt__input {
   display: flex;
   flex: 1;
   width: 100%;
-  padding: 0.2em 0.3em;
+  padding: 0.6em 0.3em;
   border-top-left-radius: var(--radius, 4px);
   border-bottom-left-radius: var(--radius, 4px);
-  color: var(--color-text-primary-primary, #434b5b);
-
+  color: var(--color-text-primary, #434b5b);
   border: 1px solid transparent;
+  &-focus{
+    padding: 0.2em 0.3em;
+    padding-bottom: 0.8em;
+  }
 }
 .inpt__button {
   display: inline-flex;
@@ -31,6 +62,8 @@
   color: var(--colot-text-light, #fff);
   cursor: pointer;
   align-items: center;
+  z-index: 1;
+  height: 100%;
 }
 .inpt__icon {
   margin-right: 0.8em;
