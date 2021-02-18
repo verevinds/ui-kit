@@ -26,12 +26,12 @@ export const Checkbox: React.FC<CheckboxProps> = props => {
     name,
     className,
     isSwitch,
-    type ='checkbox',
+    type = 'checkbox',
     ...restProps
   } = props;
 
   return (
-    <>
+    <div className='chk-box'>
       <input
         id={id ?? name}
         type={type}
@@ -39,7 +39,7 @@ export const Checkbox: React.FC<CheckboxProps> = props => {
         className={cn(isSwitch && 'switch', className)}
       />
       <label htmlFor={id ?? name}> {title}</label>
-    </>
+    </div>
   );
 };
 
