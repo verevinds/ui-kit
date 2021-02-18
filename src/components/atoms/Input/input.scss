@@ -8,13 +8,14 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
-  padding: 2px;
+  // padding: 2px;
+  padding: 0;
   background-color: var(--color-light, hsl(210, 17%, 80%));
   border-radius: var(--radius, 4px);
   overflow: hidden;
   align-items: center;
   display: flex;
-  height: 37px;
+  // height: 37px;
 }
 .inpt__title {
   position: absolute;
@@ -26,19 +27,19 @@
   transition-timing-function: linear;
   transition-duration: 300ms, 300ms;
 
-  &-focus{
+  &-focus {
     font-size: 0.8em;
-    transform: translateY(1em);
+    transform: translateY(0.7em);
     padding: 0 0.6em;
     text-transform: lowercase;
     line-height: 1;
-    top: .9em;
+    top: 0.9em;
     bottom: 0;
     left: 0;
     right: 0;
     color: var(--colot-text-light, #fff);
-    background-color: var(--color-primary-light, hsl(211, 100%, 60%));
-}
+    // background-color: var(--color-primary-light, hsl(211, 100%, 60%));
+  }
 }
 .inpt__input {
   display: flex;
@@ -49,10 +50,19 @@
   border-bottom-left-radius: var(--radius, 4px);
   color: var(--color-text-primary, #434b5b);
   border: 1px solid transparent;
-  &-focus{
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 300ms;
+  &-focus {
     padding: 0.2em 0.3em;
-    padding-bottom: 0.8em;
+    margin-bottom: 0.8em;
+    border-top-right-radius: var(--radius, 4px);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
+}
+.inpt__input-with-btn {
+  border-top-right-radius: 0;
 }
 .inpt__button {
   display: inline-flex;
@@ -68,7 +78,7 @@
   height: 100%;
 }
 .inpt__icon {
-  &-with-text{
+  &-with-text {
     margin-right: 0.8em;
   }
 }
@@ -93,7 +103,9 @@
 }
 
 .inpt-primary {
-  background-color: var(--color-primary, hsl(211, 100%, 50%));
+  // background-color: var(--color-primary, hsl(211, 100%, 50%));
+  border: 2px solid var(--color-primary, #007bff);
+  background-color: var(--color-primary, #007bff);
 }
 .inpt-primary.inpt-focus {
   background-color: var(--color-primary-light, hsl(211, 100%, 60%));

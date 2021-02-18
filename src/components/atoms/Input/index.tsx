@@ -55,6 +55,7 @@ export const Input: React.FC<InputProps> = props => {
             'inpt__input',
             'js-focus-visible',
             (focus || noEmpty) && title && 'inpt__input-focus',
+            (icon || text) && 'inpt__input-with-btn',
           )}
           placeholder={title ? undefined : placeholder}
           onFocus={() => setFocus(true)}
@@ -88,7 +89,9 @@ export const Input: React.FC<InputProps> = props => {
             )}
             onClick={onClick}
           >
-            <span className={cn('inpt__icon', text && 'inpt__icon-with-text')}>{icon}</span>
+            <span className={cn('inpt__icon', text && 'inpt__icon-with-text')}>
+              {icon}
+            </span>
             <span className='inpt__text'>{text}</span>
           </button>
         )}
