@@ -1,5 +1,5 @@
-import React, { InputHTMLAttributes, useState } from 'react';
-import { FieldError, UseFormMethods } from 'react-hook-form';
+import React, { InputHTMLAttributes } from 'react';
+import { FieldError } from 'react-hook-form';
 import 'focus-visible';
 import cn from 'classnames';
 import './checkbox.scss';
