@@ -9,6 +9,7 @@ export type ImageUploadingAddProps = {
   callback: Dispatch<SetStateAction<never[]>>;
   acceptType?: string[];
   maxNumber?: number;
+  multiple?: boolean;
 };
 
 export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({
@@ -16,6 +17,7 @@ export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({
   callback,
   acceptType = ['jpg', 'jpeg', 'webp', 'avif'],
   maxNumber = 69,
+  multiple = false,
 }) => {
   const [images, setImages] = useState<ImageListType>([]);
 
@@ -30,7 +32,7 @@ export const ImageUploadingAdd: React.FC<ImageUploadingAddProps> = ({
 
   return (
     <ReactImageUploading
-      multiple
+      multiple = {multiple}
       value={images}
       onChange={onChange}
       maxNumber={maxNumber}
