@@ -75,14 +75,14 @@
       "declaration": true,
       "moduleResolution": "node",
       "forceConsistentCasingInFileNames": true,
-      "noImplicitReturns": true,
       "noImplicitThis": true,
       "noImplicitAny": true,
       "allowSyntheticDefaultImports": true,
       "strictNullChecks": true,
       "suppressImplicitAnyIndexErrors": true,
       "noUnusedLocals": true,
-      "noUnusedParameters": true
+      "noUnusedParameters": true,
+      "noImplicitReturns": false,
     },
     "include": [
       "src"
