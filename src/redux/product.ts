@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import Api from '../../utils/Api';
+import Api from '../utils/Api';
 import { AxiosResponse } from 'axios';
 import cogoToast from 'cogo-toast';
 import { convertToRaw, EditorState } from 'draft-js';

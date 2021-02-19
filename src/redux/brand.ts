@@ -2,7 +2,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import type { RestDelete, RootState } from '.';
-import Api from '../../utils/Api';
+import Api from '../utils/Api';
 
 export type Brand = {
   _id: string;
