@@ -28,7 +28,7 @@
   transition-property: transform, font-size;
   transition-timing-function: linear;
   transition-duration: 300ms, 300ms;
-
+  cursor: text;
   &-focus {
     font-size: 0.8em;
     padding: 0.1em 0.6em;
@@ -39,6 +39,7 @@
     left: 0;
     right: 0;
     color: var(--colot-text-light, #fff);
+    cursor: initial;
     // background-color: var(--color-primary-light, hsl(211, 100%, 60%));
   }
 }
