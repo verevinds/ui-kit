@@ -3,8 +3,7 @@ import axios from 'axios';
 
 export default function Api() {
   let api;
-  const {browser:isBrowser} = process as any;
-  if (isBrowser) {
+  if (typeof window !== 'undefined') {
     api = axios.create({
       baseURL:
         process.env.NODE_ENV === 'development'
