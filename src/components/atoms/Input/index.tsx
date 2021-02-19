@@ -31,6 +31,7 @@ export const Input: React.FC<InputProps> = props => {
     title,
     className,
     name,
+    id,
     type,
     placeholder,
     ...restProps
@@ -49,7 +50,7 @@ export const Input: React.FC<InputProps> = props => {
         )}
       >
         <input
-          id={name}
+          id={id}
           name={name}
           className={cn(
             'inpt__input',
@@ -73,7 +74,7 @@ export const Input: React.FC<InputProps> = props => {
         />
         {title && (
           <label
-            htmlFor={name}
+            htmlFor={id}
             className={cn(
               'inpt__title',
               (focus || noEmpty) && 'inpt__title-focus',
