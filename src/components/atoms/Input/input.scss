@@ -20,7 +20,7 @@
 .inpt__title {
   position: absolute;
   padding: 0.5em 0.3em;
-
+  background-color: #fff;
   color: var(--color-text-primary, #434b5b);
   font-weight: 200;
   transition-property: transform, font-size;
@@ -31,6 +31,7 @@
     font-size: 0.8em;
     transform: translateY(0.7em);
     // padding: 0 0.6em;
+    background-color: transparent;
     text-transform: lowercase;
     line-height: 1;
     top: 0.9em;

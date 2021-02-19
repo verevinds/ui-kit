@@ -31,6 +31,7 @@ export const Input: React.FC<InputProps> = props => {
     title,
     className,
     name,
+    type,
     placeholder,
     ...restProps
   } = props;
@@ -67,6 +68,7 @@ export const Input: React.FC<InputProps> = props => {
             setFocus(false);
           }}
           autoComplete='off'
+          type={type}
           {...restProps}
         />
         {title && (

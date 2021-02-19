@@ -31,7 +31,6 @@ const Template: Story<InputProps> = args => {
       <Input
         {...args}
         name='test'
-        type='text'
         error={errors.test?.message}
         onChange={(e: React.SyntheticEvent)=>{
           const {value} = e.target as HTMLInputElement
@@ -71,10 +70,18 @@ WithTitle.args = {
   disabled: false,
   title: 'Заголовок'
 };
-export const WithTitleAdnButton = Template.bind({});
 
+export const WithTitleAdnButton = Template.bind({});
 WithTitleAdnButton.args = {
   disabled: false,
   title: 'Заголовок',
   icon: <FontAwesomeIcon icon={faSearch} />,
+};
+
+
+export const howDate = Template.bind({});
+howDate.args = {
+  disabled: false,
+  title: 'Заголовок',
+  type: 'date',
 };
