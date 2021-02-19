@@ -39,14 +39,13 @@ export const Input: React.FC<InputProps> = props => {
   const [focus, setFocus] = useState(false);
   const [noEmpty, toggleNoEmpty] = useState(false);
   return (
-    <div className='inpt-wrapper'>
+    <div className={cn('inpt-wrapper', className)}>
       <div
         className={cn(
           'inpt',
           `inpt-${variant}`,
           focus && 'inpt-focus',
           error && 'inpt-error',
-          className,
         )}
       >
         <input
