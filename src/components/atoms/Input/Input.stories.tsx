@@ -84,4 +84,5 @@ howDate.args = {
   disabled: false,
   title: 'Заголовок',
   type: 'date',
+  id: '1'
 };
