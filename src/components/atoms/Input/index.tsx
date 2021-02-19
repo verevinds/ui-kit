@@ -48,7 +48,6 @@ export const Input: React.FC<InputProps> = props => {
         )}
       >
         <input
-          {...restProps}
           id={name}
           name={name}
           className={cn(
@@ -68,6 +67,7 @@ export const Input: React.FC<InputProps> = props => {
             setFocus(false);
           }}
           autoComplete='off'
+          {...restProps}
         />
         {title && (
           <label
