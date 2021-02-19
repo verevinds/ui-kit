@@ -3,3 +3,4 @@ export { default as Input } from '../src/components/atoms/Input';
 export { default as Checkbox } from '../src/components/atoms/Checkbox';
 export { default as ImageUploadingAdd } from '../src/components/atoms/ImageUploadingAdd';
 export { default as ImageUploadingView } from '../src/components/molecules/ImageUploadingView/ImageUploadingView';
+export { default as rootReducer } from './redux'
