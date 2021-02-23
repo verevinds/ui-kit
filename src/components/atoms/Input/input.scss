@@ -18,6 +18,7 @@
   background-color: hsl(0, 0%, 80%);
   // border: 1px solid hsl(0, 0%, 80%);
   // height: 37px;
+  transition: all linear 300ms;
 }
 .inpt__title {
   position: absolute;
@@ -27,9 +28,7 @@
   right: 0;
   color: var(--color-text-primary, hsl(0, 0%, 50%));
   font-weight: 200;
-  transition-property: transform, font-size;
-  transition-timing-function: linear;
-  transition-duration: 300ms, 300ms;
+  transition: all linear 300ms;
   cursor: text;
   &-focus {
     font-size: 0.8em;
@@ -54,9 +53,7 @@
   border-bottom-left-radius: var(--radius, 4px);
   color: var(--color-text-primary, hsl(0, 0%, 50%));
   border: 1px solid transparent;
-  transition-property: all;
-  transition-timing-function: linear;
-  transition-duration: 300ms;
+  transition: all linear 300ms;
   &-focus {
     padding: 0.2em 0.3em;
     margin-bottom: 0.8em;
