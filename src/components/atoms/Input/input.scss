@@ -106,6 +106,8 @@
 }
 .inpt-error {
   background-color: var(--color-danger, hsl(354, 70%, 50%));
+  box-shadow: 0 0 0 1px var(--color-danger, hsl(354, 70%, 50%));
+  border-color: var(--color-danger, hsl(354, 70%, 50%));
 }
 
 .inpt-primary {
