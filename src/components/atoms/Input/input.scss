@@ -100,9 +100,9 @@
   outline: none;
 }
 .inpt-focus {
-  background-color: #2684ff;
-  box-shadow: 0 0 0 1px #2684ff;
-  border-color: #2684ff;
+  background-color: var(--color-primary, #007bff);
+  box-shadow: 0 0 0 1px var(--color-primary, #007bff);
+  border-color: var(--color-primary, #007bff);
 }
 .inpt-error {
   background-color: var(--color-danger, hsl(354, 70%, 50%));
