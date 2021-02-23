@@ -1,0 +1,16 @@
+.slider-wrapper {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  // scroll-snap-type: x;
+  gap: 1rem;
+  -webkit-overflow-scrolling: touch; /* Важно для iOS-устройств */
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+.swiper-slide {
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  // scroll-snap-align: start;
+}
