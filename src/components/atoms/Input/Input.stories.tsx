@@ -22,9 +22,8 @@ const Template: Story<InputProps> = args => {
 
   const onSubmit = async brand => {
     console.log(brand);
-
   };
-  console.log(errors)
+  console.log(errors);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -32,18 +31,17 @@ const Template: Story<InputProps> = args => {
         {...args}
         name='test'
         error={errors.test?.message}
-        onChange={(e: React.SyntheticEvent)=>{
-          const {value} = e.target as HTMLInputElement
-          if(value)
-          setError('test', {
-            type: 'required',
-            message: '',
-          });
-          setValue('test', value)
+        onChange={(e: React.SyntheticEvent) => {
+          const { value } = e.target as HTMLInputElement;
+          if (value)
+            setError('test', {
+              type: 'required',
+              message: '',
+            });
+          setValue('test', value);
         }}
       />
-      <button type='submit'>Ok
-      </button>
+      <button type='submit'>Ok</button>
     </form>
   );
 };
@@ -52,10 +50,9 @@ export const Default = Template.bind({});
 Default.args = {
   disabled: false,
   className: 'addClass',
-  variant: 'primary',
   icon: <FontAwesomeIcon icon={faSearch} />,
   placeholder: 'Тестовый текст',
-  text: 'Поиск'
+  text: 'Поиск',
 };
 
 export const Empty = Template.bind({});
@@ -68,7 +65,7 @@ export const WithTitle = Template.bind({});
 
 WithTitle.args = {
   disabled: false,
-  title: 'Заголовок'
+  title: 'Заголовок',
 };
 
 export const WithTitleAdnButton = Template.bind({});
@@ -78,11 +75,10 @@ WithTitleAdnButton.args = {
   icon: <FontAwesomeIcon icon={faSearch} />,
 };
 
-
 export const howDate = Template.bind({});
 howDate.args = {
   disabled: false,
   title: 'Заголовок',
   type: 'date',
-  id: '1'
+  id: '1',
 };

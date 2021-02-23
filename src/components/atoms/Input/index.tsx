@@ -23,7 +23,6 @@ export type InputProps = InputHTMLAttributes<Element> & {
 
 export const Input: React.FC<InputProps> = props => {
   const {
-    variant = 'primary',
     onClick,
     error,
     icon,
@@ -34,6 +33,7 @@ export const Input: React.FC<InputProps> = props => {
     id,
     type,
     placeholder,
+    variant,
     ...restProps
   } = props;
   const [focus, setFocus] = useState(false);
@@ -43,7 +43,7 @@ export const Input: React.FC<InputProps> = props => {
       <div
         className={cn(
           'inpt',
-          `inpt-${variant}`,
+          variant && `inpt-${variant}`,
           focus && 'inpt-focus',
           error && 'inpt-error',
         )}
