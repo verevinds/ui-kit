@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, useState } from 'react';
+import React, { InputHTMLAttributes, useEffect, useState } from 'react';
 import { FieldError, UseFormMethods } from 'react-hook-form';
 import 'focus-visible';
 import cn from 'classnames';
@@ -38,6 +38,10 @@ export const Input: React.FC<InputProps> = props => {
   } = props;
   const [focus, setFocus] = useState(false);
   const [noEmpty, toggleNoEmpty] = useState(false);
+  useEffect(()=>{
+    if(restProps.value)
+      setFocus(true)
+  },[restProps.value])
   return (
     <div className={cn('inpt-wrapper', className)}>
       <div
